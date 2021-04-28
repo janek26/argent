@@ -11,7 +11,9 @@ export const fetchErc20Balances = (address: string): Promise<OneInchBalances> =>
     .then((x) => x.json())
     .then(filterNullBalances)
 
-const filterNullBalances = (balances: OneInchBalances): OneInchBalances =>
+export const filterNullBalances = (
+  balances: OneInchBalances,
+): OneInchBalances =>
   Object.fromEntries(
     Object.entries(balances)
       .filter(([_, balance]) => balance !== "0")

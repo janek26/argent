@@ -121,3 +121,4 @@ dist
 # Custom:
 # generated types
 types
+coverage/
