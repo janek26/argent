@@ -1,7 +1,9 @@
 import { BigNumber, ethers } from "ethers"
 
+const { NEXT_PUBLIC_JSON_RPC_PROVIDER } = process.env
+
 export const ethereum = new ethers.providers.JsonRpcProvider(
-  "https://mainnet.infura.io/v3/7d0d81d0919f4f05b9ab6634be01ee73",
+  NEXT_PUBLIC_JSON_RPC_PROVIDER,
 )
 
 export const getBalance = async (address: string): Promise<BigNumber> => {

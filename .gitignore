@@ -122,3 +122,5 @@ dist
 # generated types
 types
 coverage/
+
+.vercel

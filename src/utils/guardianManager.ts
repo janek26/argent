@@ -1,8 +1,10 @@
 import { GuardianManagerAbi__factory } from "../../types/ethers-contracts"
 import { ethereum } from "./ethereum"
 
+const { NEXT_PUBLIC_GUARDIAN_MANAGER_ADDRESS } = process.env
+
 export const GuardianManager = GuardianManagerAbi__factory.connect(
-  "0xFF5A7299ff6f0fbAad9b38906b77d08c0FBdc9A7",
+  NEXT_PUBLIC_GUARDIAN_MANAGER_ADDRESS,
   ethereum,
 )
 
