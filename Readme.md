@@ -13,6 +13,15 @@ If that's not the case, or you want to regenerate them, run:
 yarn generate
 ```
 
+You should add your own `.env` file before spinning it up.
+You need to add your `NEXT_PUBLIC_JSON_RPC_PROVIDER` (infura or other ethereum rpc endpoint).
+
+```
+cp .env.sample .env
+
+vim .env # add NEXT_PUBLIC_JSON_RPC_PROVIDER
+```
+
 Now you can start next.js in dev mode with:
 
 ```
